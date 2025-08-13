@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Cancer - Entrenamiento Oncológico</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Favicon (ejemplo, puedes crear el tuyo) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+    <style>
+        /* Estilo base con la fuente Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0A; /* Un negro ligeramente más suave */
+            color: #E0E0E0; /* Un blanco roto para mejor lectura */
+        }
+
+        /* Degradado para el Hero Section */
+        .hero-gradient {
+            background: radial-gradient(ellipse at 50% -20%, rgba(19, 78, 245, 0.3), rgba(10, 10, 10, 0) 40%);
+        }
+
+        /* Estilo para los títulos principales */
+        .title-highlight {
+            background: -webkit-linear-gradient(45deg, #3B82F6, #A855F7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Animaciones sutiles */
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 0.8s ease-out forwards;
+        }
+        
+        /* Estilo para el acordeón de FAQ */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary .arrow-down {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full bg-black/50 backdrop-blur-lg z-50 border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter">
+    <span class="title-highlight">Move Cancer</span>
+</a>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#ciencia" class="text-gray-300 hover:text-white transition-colors">El Método</a>
+                <a href="#historias" class="text-gray-300 hover:text-white transition-colors">Historias</a>
+                <a href="#faq" class="text-gray-300 hover:text-white transition-colors">Preguntas</a>
+            </nav>
+            <a href="#contacto" class="hidden md:inline-block bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition-all">
+                Empezar Ahora
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <nav class="px-6 pt-2 pb-4 flex flex-col space-y-3">
+                <a href="#ciencia" class="text-gray-300 hover:text-white transition-colors block">El Método</a>
+                <a href="#historias" class="text-gray-300 hover:text-white transition-colors block">Historias</a>
+                <a href="#faq" class="text-gray-300 hover:text-white transition-colors block">Preguntas</a>
+                 <a href="#contacto" class="bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition-all text-center">
+                    Empezar Ahora
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECCIÓN 1: HERO -->
+        <section id="hero" class="min-h-screen flex items-center pt-24 pb-12 hero-gradient">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-4xl mx-auto animate-fade-in-up">
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-tight mb-6">
+                        NO ERES UN DIAGNÓSTICO.
+                        <span class="title-highlight">ERES MOVIMIENTO</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10">
+                        Únete a Move Cancer. El programa de entrenamiento oncológico que utiliza la ciencia para darte el control. Activa la proteína p53 y las defensas naturales de tu cuerpo.
+                    </p>
+                    <a href="#contacto" class="bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-blue-700 transition-all transform hover:scale-105 inline-block">
+                        RESERVAR MI LLAMADA ESTRATÉGICA
+                    </a>
+                    <p class="text-sm text-gray-500 mt-4">Llamada de valoración gratuita de 15 minutos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: LA CIENCIA (PARA TRANSMITIR SEGURIDAD) -->
+        <section id="ciencia" class="py-20 bg-black">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16 animate-fade-in-up" style="animation-delay: 0.2s;">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Tu diagnóstico no define tu potencial. La ciencia es tu nueva súper-herramienta.</h2>
+                    <p class="text-gray-400 text-lg">No creemos en la magia, creemos en la fisiología. Nuestro método se basa en 3 pilares científicos para potenciar tu cuerpo.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Pilar 1 -->
+                    <div class="bg-gray-900 p-8 rounded-xl border border-gray-800 animate-fade-in-up" style="animation-delay: 0.4s;">
+                        <div class="text-blue-500 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M12 6V3m0 18v-3M5.636 5.636l-1.414-1.414m15.556 15.556l-1.414-1.414M18.364 5.636l-1.414 1.414M5.636 18.364l1.414-1.414" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Activación P53</h3>
+                        <p class="text-gray-400">Diseñamos entrenamientos que estimulan la proteína p53, el "guardián del genoma", ayudando a tu cuerpo en sus procesos naturales de reparación celular.</p>
+                    </div>
+                    <!-- Pilar 2 -->
+                    <div class="bg-gray-900 p-8 rounded-xl border border-gray-800 animate-fade-in-up" style="animation-delay: 0.6s;">
+                        <div class="text-purple-500 mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Liberación de Mioquinas</h3>
+                        <p class="text-gray-400">Cada contracción muscular libera mioquinas, potentes moléculas con efecto antiinflamatorio que viajan por tu cuerpo combatiendo la inflamación sistémica.</p>
+                    </div>
+                    <!-- Pilar 3 -->
+                    <div class="bg-gray-900 p-8 rounded-xl border border-gray-800 animate-fade-in-up" style="animation-delay: 0.8s;">
+                        <div class="text-green-500 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Programación Personalizada</h3>
+                        <p class="text-gray-400">No hay dos personas ni dos cánceres iguales. Tu plan es 100% adaptado a tu diagnóstico, estado físico y objetivos por fisioterapeutas oncológicos certificados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: PRUEBA SOCIAL (HISTORIAS) -->
+        <section id="historias" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16 animate-fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Historias que <span class="title-highlight">Potencian</span></h2>
+                    <p class="text-gray-400 text-lg">No eres un paciente, eres un atleta preparándose para su prueba más importante. Ellos ya lo han vivido.</p>
+                </div>
+                <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <!-- Testimonio 1 -->
+                    <div class="bg-gray-900 p-8 rounded-xl border border-gray-800 flex flex-col md:flex-row items-start gap-6 animate-fade-in-up" style="animation-delay: 0.2s;">
+                        <img src="https://placehold.co/100x100/3B82F6/FFFFFF?text=LR" alt="Foto de Laura R." class="w-24 h-24 rounded-full object-cover border-4 border-blue-600 flex-shrink-0">
+                        <div>
+                            <blockquote class="text-lg italic text-gray-300 mb-4">
+                                "Después de la quimio, me sentía ajena en mi propio cuerpo. Potencia 53 no solo me devolvió la fuerza, me dio el manual de instrucciones para reconstruirme. Dejé de ser una superviviente para ser una biohacker de mi propia salud."
+                            </blockquote>
+                            <cite class="font-bold not-italic">Laura R. <span class="text-gray-500 font-normal">- Superviviente de Cáncer de Mama</span></cite>
+                        </div>
+                    </div>
+                    <!-- Testimonio 2 -->
+                    <div class="bg-gray-900 p-8 rounded-xl border border-gray-800 flex flex-col md:flex-row items-start gap-6 animate-fade-in-up" style="animation-delay: 0.4s;">
+                        <img src="https://placehold.co/100x100/A855F7/FFFFFF?text=CM" alt="Foto de Carlos M." class="w-24 h-24 rounded-full object-cover border-4 border-purple-600 flex-shrink-0">
+                        <div>
+                            <blockquote class="text-lg italic text-gray-300 mb-4">
+                                "El oncólogo se ocupaba de la enfermedad. Potencia 53 se ocupó de mí. Pasé de sentirme frágil a sentir que podía darle órdenes a mi cuerpo de nuevo. La fuerza que gané fue mi ancla durante todo el proceso."
+                            </blockquote>
+                            <cite class="font-bold not-italic">Carlos M. <span class="text-gray-500 font-normal">- Paciente con Cáncer de Colon</span></cite>
+                        </div>
+                    </div>
+                </div>
+                 <div class="text-center mt-12 animate-fade-in-up" style="animation-delay: 0.6s;">
+                    <div class="inline-flex items-center gap-2 text-xl font-bold text-yellow-400">
+                        ★★★★★ <span class="text-white ml-2">4.9/5 de valoración media</span>
+                    </div>
+                    <p class="text-gray-400 mt-2">Basado en más de 150 atletas potenciados.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SECCIÓN 4: MANIFIESTO (LENGUAJE ROMPEDOR) -->
+        <section id="manifiesto" class="py-20 bg-black">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center animate-fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8">Nuestro Manifiesto</h2>
+                    <div class="space-y-6 text-xl md:text-2xl text-left border-l-4 border-blue-600 pl-8">
+                        <p>1. <strong>Hablamos de CÁNCER.</strong> Sin rodeos. Nombrarlo es el primer paso para actuar.</p>
+                        <p>2. <strong>La CIENCIA es nuestro mapa.</strong> No hay opiniones, solo fisiología y evidencia.</p>
+                        <p>3. <strong>El MOVIMIENTO es medicina.</strong> Eres el agente activo de tu salud.</p>
+                        <p>4. <strong>La FATIGA se combate con INTELIGENCIA.</strong> Te enseñamos cuándo y cómo moverte.</p>
+                        <p>5. <strong>La ESPERANZA es un plan de acción.</strong> Y el tuyo empieza aquí.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: FAQ (DISEÑO AMIGABLE Y RESOLUCIÓN DE DUDAS) -->
+        <section id="faq" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-12 animate-fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Preguntas que te estás haciendo</h2>
+                    <p class="text-gray-400 text-lg">Es normal tener dudas. Aquí respondemos a las más comunes con total transparencia.</p>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <!-- Pregunta 1 -->
+                    <details class="bg-gray-900 border border-gray-800 rounded-lg p-6 animate-fade-in-up" style="animation-delay: 0.2s;">
+                        <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center">
+                            ¿Puedo entrenar si estoy en pleno tratamiento (quimio/radio)?
+                            <span class="arrow-down transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                            </span>
+                        </summary>
+                        <p class="text-gray-400 mt-4">
+                            Sí. De hecho, es uno de los momentos donde más beneficioso puede ser. La evidencia científica apoya el ejercicio adaptado durante el tratamiento para reducir efectos secundarios como la fatiga, mejorar la tolerancia al tratamiento y mantener la masa muscular. Todos los planes son 100% personalizados y seguros, creados por fisioterapeutas oncológicos que se coordinarán con tu equipo médico.
+                        </p>
+                    </details>
+                    <!-- Pregunta 2 -->
+                    <details class="bg-gray-900 border border-gray-800 rounded-lg p-6 animate-fade-in-up" style="animation-delay: 0.4s;">
+                        <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center">
+                            No tengo nada de energía. ¿Cómo voy a entrenar?
+                            <span class="arrow-down transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                            </span>
+                        </summary>
+                        <p class="text-gray-400 mt-4">
+                            Esta es la paradoja de la fatiga oncológica: el descanso absoluto puede empeorarla. Nuestro método se basa en el "energy pacing". Te enseñamos a usar el movimiento como una herramienta para generar energía, no para gastarla. Empezamos con sesiones muy cortas y de baja intensidad, monitorizando tu respuesta para progresar de forma segura y efectiva.
+                        </p>
+                    </details>
+                     <!-- Pregunta 3 -->
+                    <details class="bg-gray-900 border border-gray-800 rounded-lg p-6 animate-fade-in-up" style="animation-delay: 0.6s;">
+                        <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center">
+                            ¿Necesito equipamiento especial o ir a un gimnasio?
+                            <span class="arrow-down transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                            </span>
+                        </summary>
+                        <p class="text-gray-400 mt-4">
+                            No. Todos nuestros planes están diseñados para ser realizados desde casa con mínimo o ningún material. Nos adaptamos a lo que tengas disponible. Lo más importante es tu cuerpo; el resto son solo herramientas.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 6: CTA FINAL (MARKETING EN SALUD) -->
+        <section id="contacto" class="py-20 bg-blue-900/20">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-3xl mx-auto animate-fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Es hora de tomar el control.</h2>
+                    <p class="text-gray-400 text-lg mb-8">Tu siguiente capítulo no lo escribe tu diagnóstico, lo escribes tú. Agenda una llamada gratuita de 15 minutos con uno de nuestros fisioterapeutas oncológicos. Sin compromiso, sin presión. Solo ciencia y estrategia para tu plan de acción.</p>
+                    <a href="https://calendly.com/your-link" target="_blank" class="bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-blue-700 transition-all transform hover:scale-105 inline-block">
+                        AGENDAR MI LLAMADA AHORA
+                    </a>
+                    <p class="text-sm text-gray-500 mt-4">Serás redirigido a Calendly para elegir la hora que mejor te convenga.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+           <p class="font-bold text-lg text-gray-300 mb-2">Move Cancer</p>
+            <div class="flex justify-center space-x-6 mb-6">
+                <!-- Reemplaza con tus links -->
+                <a href="#" class="hover:text-white transition-colors">Instagram</a>
+                <a href="#" class="hover:text-white transition-colors">YouTube</a>
+                <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+            </div>
+            <p class="text-sm max-w-2xl mx-auto mb-4">
+                <strong class="text-gray-400">AVISO IMPORTANTE:</strong> Potencia 53 es un programa de apoyo al tratamiento oncológico basado en la evidencia científica. Nuestros servicios no reemplazan el diagnóstico, tratamiento o consejo de tu equipo médico. Consulta siempre con tu oncólogo antes de iniciar este o cualquier otro programa de ejercicio físico.
+            </p>
+            <p class="text-xs">&copy; 2025 Move Cancer. Todos los derechos reservados. Creado para potenciar.</p>
+        
+    </footer>
+
+    <script>
+        // Script para el menú móvil
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // SOLUCIÓN 1: Nos aseguramos de que los elementos existen antes de usarlos.
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Opcional: animaciones al hacer scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section > div').forEach(el => {
+            // SOLUCIÓN 2: Le decimos a TypeScript que 'el' es un elemento HTML.
+            if (el instanceof HTMLElement) {
+                el.style.opacity = '0';
+                observer.observe(el);
+            }
+        });
+    </script>
+</body>
+</html>
